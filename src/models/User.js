@@ -27,6 +27,10 @@ const User = sequelize.define("user", {
     type: DataTypes.DATE,
     allowNull: false,
   },
+  picture: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  }
 });
 
 module.exports = User;
