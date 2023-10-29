@@ -16,7 +16,7 @@ app.use(helmet({
 app.use(cors());
 
 // Routing
-app.use(userRouter);
+app.use('/api/v1', userRouter);
 
 
 // middlewares después de las rutas

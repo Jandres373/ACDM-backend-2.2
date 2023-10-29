@@ -10,16 +10,19 @@ const express = require("express");
 const userRouter = express.Router();
 
 // Read
-userRouter.get("/api/users", getAllUsers);
-userRouter.get("/api/users/:id", getSingleUser);
+userRouter.get("/", (req, res) => {
+  res.send("Welcome to Users.api");
+})
+userRouter.get("/users", getAllUsers);
+userRouter.get("/users/:id", getSingleUser);
 
 // Create
-userRouter.post("/api/users/", createUser);
+userRouter.post("/users/", createUser);
 
 // Update
-userRouter.put("/api/users/:id", upadteUser);
+userRouter.put("/users/:id", upadteUser);
 
 // Delete
-userRouter.delete("/api/users/:id", deleteUser);
+userRouter.delete("/users/:id", deleteUser);
 
 module.exports = userRouter;
