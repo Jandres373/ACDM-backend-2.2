@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 
 const main = async() => {
     try{
-        await sequelize.sync()
+        await sequelize.sync({force: true})
         app.listen(PORT);
         await new Promise((resolve, reject) => {
             const migrate = exec(
